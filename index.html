@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MultiAgent E-Commerce Support — Showcase</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="anubhav.css">
+</head>
+
+<body>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="badge">
+            <span class="badge-dot"></span>
+            Live System Demo
+        </div>
+        <h1>Multi-Agent E-Commerce<br />Customer Support AI</h1>
+        <p>Real conversations powered by LangGraph, Gemini 2.5 Flash, and GCP Cloud SQL — handling orders, payouts,
+            shipments, and more.</p>
+        <div class="tech-pills">
+            <span class="pill">LangGraph</span>
+            <span class="pill">Gemini 2.5 Flash</span>
+            <span class="pill">FastAPI</span>
+            <span class="pill">GCP Cloud Run</span>
+            <span class="pill">Cloud SQL (PostgreSQL)</span>
+            <span class="pill">FAISS RAG</span>
+            <span class="pill">Next.js</span>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat">
+                <div class="stat-num">4</div>
+                <div class="stat-label">AI Agents</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num">7</div>
+                <div class="stat-label">Graph Nodes</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num">164</div>
+                <div class="stat-label">Seeded Users</div>
+            </div>
+            <div class="stat">
+                <div class="stat-num">Live</div>
+                <div class="stat-label">GCP Deployment</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION HEADER -->
+    <div class="section-header">
+        <h2>Real Conversation Showcases</h2>
+        <p>Each scenario uses a real test user with live database data — no mocked responses.</p>
+    </div>
+
+    <!-- USE CASES -->
+    <div class="cases">
+
+        <!-- CASE 1: Sarah Seller — Payout Status -->
+        <div class="case-card card-1">
+            <div class="case-header">
+                <div class="case-icon">💰</div>
+                <div class="case-meta">
+                    <div class="case-num">Use Case 01</div>
+                    <div class="case-title">Seller Payout Inquiry</div>
+                    <div class="case-sub">Pending payout status + weekend payment policy</div>
+                </div>
+                <div class="case-tags">
+                    <span class="tag tag-1">SQL Agent</span>
+                    <span class="tag tag-2">RAG Agent</span>
+                    <span class="tag tag-3">Multi-turn</span>
+                </div>
+            </div>
+            <div class="login-bar">
+                <span class="login-label">Test Login</span>
+                <span class="login-cred">sarah.seller@test.com</span>
+                <span class="login-sep">/</span>
+                <span class="login-cred">password123</span>
+            </div>
+            <div class="screenshots">
+                <div class="screenshot-wrap">
+                    <span class="screenshot-label">Turn 1 – 3</span>
+                    <img src="1.0-sarah.seller-1.0.png" alt="Sarah Seller conversation part 1" loading="lazy" />
+                </div>
+                <div class="screenshot-wrap">
+                    <span class="screenshot-label">Turn 4 – 6</span>
+                    <img src="2.0-sarah.seller-2.0.png" alt="Sarah Seller conversation part 2" loading="lazy" />
+                </div>
+            </div>
+            <div class="case-summary">
+                <span class="summary-icon">💡</span>
+                <p class="summary-text">
+                    The <strong>SQL Agent</strong> fetches Sarah's real pending payout of <strong>$38.25</strong> from
+                    Cloud SQL. Follow-up questions about processing times and weekend availability are answered by the
+                    <strong>RAG Agent</strong> from the policy knowledge base — all within a single continuous
+                    conversation.
+                </p>
+            </div>
+        </div>
+
+        <!-- CASE 2: Tom Reject — Failed Payout -->
+        <div class="case-card card-2">
+            <div class="case-header">
+                <div class="case-icon">❌</div>
+                <div class="case-meta">
+                    <div class="case-num">Use Case 02</div>
+                    <div class="case-title">Failed Payout — Invalid Account</div>
+                    <div class="case-sub">Detecting a failed payout with root cause from DB</div>
+                </div>
+                <div class="case-tags">
+                    <span class="tag tag-1">SQL Agent</span>
+                    <span class="tag tag-2">RAG Agent</span>
+                    <span class="tag tag-3">HITL Ready</span>
+                </div>
+            </div>
+            <div class="login-bar">
+                <span class="login-label">Test Login</span>
+                <span class="login-cred">tom.r@test.com</span>
+                <span class="login-sep">/</span>
+                <span class="login-cred">password123</span>
+            </div>
+            <div class="screenshots">
+                <div class="screenshot-wrap">
+                    <span class="screenshot-label">Turn 1 – 2</span>
+                    <img src="3.0--tom-1.0.png" alt="Tom Reject conversation part 1" loading="lazy" />
+                </div>
+                <div class="screenshot-wrap">
+                    <span class="screenshot-label">Turn 3 – 5</span>
+                    <img src="4.0-tom-2.0.png" alt="Tom Reject conversation part 2" loading="lazy" />
+                </div>
+            </div>
+            <div class="case-summary">
+                <span class="summary-icon">💡</span>
+                <p class="summary-text">
+                    The <strong>SQL Agent</strong> retrieves Tom's <strong>FAILED $250 payout</strong> with the exact
+                    failure reason: <em>Invalid Account Number</em>. The bot then provides actionable resolution steps
+                    from the policy RAG — demonstrating data-aware, context-grounded support.
+                </p>
+            </div>
+        </div>
+
+        <!-- CASE 3: Steve Stuck — Shipment in Transit -->
+        <div class="case-card card-3">
+            <div class="case-header">
+                <div class="case-icon">📦</div>
+                <div class="case-meta">
+                    <div class="case-num">Use Case 03</div>
+                    <div class="case-title">Stuck Shipment Detection</div>
+                    <div class="case-sub">Order stuck in transit with no recent movement</div>
+                </div>
+                <div class="case-tags">
+                    <span class="tag tag-1">SQL Agent</span>
+                    <span class="tag tag-2">Multi-step</span>
+                    <span class="tag tag-3">Escalation</span>
+                </div>
+            </div>
+            <div class="login-bar">
+                <span class="login-label">Test Login</span>
+                <span class="login-cred">steve.stuck@test.com</span>
+                <span class="login-sep">/</span>
+                <span class="login-cred">password123</span>
+            </div>
+            <div class="screenshots">
+                <div class="screenshot-wrap">
+                    <span class="screenshot-label">Turn 1 – 2</span>
+                    <img src="5.0-steve-stuck-1.0.png" alt="Steve Stuck conversation part 1" loading="lazy" />
+                </div>
+                <div class="screenshot-wrap">
+                    <span class="screenshot-label">Turn 3 – 5</span>
+                    <img src="6.0-steve-stuck-2.0.png" alt="Steve Stuck conversation part 2" loading="lazy" />
+                </div>
+            </div>
+            <div class="case-summary">
+                <span class="summary-icon">💡</span>
+                <p class="summary-text">
+                    Steve's order shows <strong>SHIPPED</strong> status with tracking <code
+                        style="font-family:'Fira Code',monospace;font-size:0.8em;color:#fbbf24;">TRACK_STUCK_001</code>
+                    — flagged as stuck in transit from logistics data. The bot proactively identifies the anomaly,
+                    provides a <strong>multi-step resolution guide</strong>, and offers to escalate to a human agent.
+                </p>
+            </div>
+        </div>
+
+        <!-- CASE 4: Multi Order Mike -->
+        <div class="case-card card-4">
+            <div class="case-header">
+                <div class="case-icon">🛒</div>
+                <div class="case-meta">
+                    <div class="case-num">Use Case 04</div>
+                    <div class="case-title">Multi-Order Summary & Drill-down</div>
+                    <div class="case-sub">3 orders across different statuses — delivered, shipped, cancelled</div>
+                </div>
+                <div class="case-tags">
+                    <span class="tag tag-1">SQL Agent</span>
+                    <span class="tag tag-2">Memory</span>
+                    <span class="tag tag-3">Multi-turn</span>
+                </div>
+            </div>
+            <div class="login-bar">
+                <span class="login-label">Test Login</span>
+                <span class="login-cred">multi.mike@test.com</span>
+                <span class="login-sep">/</span>
+                <span class="login-cred">password123</span>
+            </div>
+            <div class="screenshots">
+                <div class="screenshot-wrap">
+                    <span class="screenshot-label">Turn 1 – 2</span>
+                    <img src="7.0-multi-order-mike-1.0.png" alt="Multi Order Mike conversation part 1" loading="lazy" />
+                </div>
+                <div class="screenshot-wrap">
+                    <span class="screenshot-label">Turn 3 – 5</span>
+                    <img src="8.0-multi-order-mike-2.o.png" alt="Multi Order Mike conversation part 2" loading="lazy" />
+                </div>
+            </div>
+            <div class="case-summary">
+                <span class="summary-icon">💡</span>
+                <p class="summary-text">
+                    The <strong>SQL Agent</strong> retrieves all 3 of Mike's orders in a single query — a
+                    <strong>$12,000 delivered order</strong>, a shipped order, and a cancelled one. The bot maintains
+                    <strong>conversation memory</strong> across turns, allowing Mike to drill into specific orders
+                    without repeating context.
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Built with <span>LangGraph + Gemini 2.5 Flash</span> &nbsp;·&nbsp; Deployed on <span>GCP Cloud Run</span>
+            &nbsp;·&nbsp; &copy; 2026 Innodata</p>
+    </footer>
+    <script src="anubhav.js"></script>
+</body>
+
+</html>
